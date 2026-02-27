@@ -1,8 +1,8 @@
-# JobPortal - Modern Job Portal Application
+# NextHire - Modern Job Portal Application
 
 ## Description
 
-JobPortal is a modern, full-stack job portal web application built with React. It enables job seekers to browse and apply for jobs, manage their applications, and maintain professional profiles, while employers can post jobs and manage applications efficiently. The platform focuses on clean UX, real-time feedback, and scalable frontend architecture.
+NextHire is a modern, full-stack job portal web application built with React. It enables job seekers to browse and apply for jobs, manage their applications, and maintain professional profiles, while employers can post jobs and manage applications efficiently. The platform focuses on clean UX, real-time feedback, and scalable frontend architecture.
 
 ---
 
@@ -41,8 +41,8 @@ Before you begin, ensure you have the following installed:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/aarifhsn/reactive-job-portal
-   cd reactive-job-portal
+   git clone https://github.com/aarifhsn/nexthire
+   cd nexthire
    ```
 
 2. **Install dependencies**
@@ -89,6 +89,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - GitHub: [@aarifhsn](https://github.com/aarifhsn)
 - Website: arifhassan.com
 
-# batch-4-assignment-5-reactive-job-portal-aarifhsn
-# batch-4-assignment-5-lws-job-portal-aarifhsn
 # NextHire
