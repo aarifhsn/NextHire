@@ -24,4 +24,14 @@ const getTimeAgo = (date) => {
   return `${days} days ago`;
 };
 
-export { formatDate, getTimeAgo };
+const fileUrl = (path) => {
+  if (!path) return null;
+
+  // already full URL (production-safe)
+  if (path.startsWith("http")) return path;
+
+  const BASE = import.meta.env.VITE_API_BASE_URL.replace("/api", "");
+  return BASE + path;
+};
+
+export { fileUrl, formatDate, getTimeAgo };

@@ -87,7 +87,8 @@ export default function EditProfile() {
 
       // Set profile picture preview
       if (profileData.profilePictureUrl) {
-        setProfilePicturePreview(profileData.profilePictureUrl);
+        const BASE_URL = "http://localhost:5000";
+        setProfilePicturePreview(BASE_URL + profileData.profilePictureUrl);
       }
     } catch (error) {
       console.error("Error fetching profile:", error);

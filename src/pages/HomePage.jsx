@@ -4,7 +4,6 @@ import { toast } from "react-toastify";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import JobApplicationButton from "../components/JobApplicationButton";
-import { useAuth } from "../context/AuthContext";
 import { jobsAPI } from "../services/api";
 
 import {
@@ -19,7 +18,6 @@ import {
 } from "lucide-react";
 
 export default function HomePage() {
-  const { isAuthenticated } = useAuth();
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");

@@ -1,4 +1,31 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
+  const getFooterLink = (label) => {
+    const map = {
+      // Seekers
+      "Browse Jobs": "/",
+      Companies: "/companies",
+      "Career Advice": "/blog",
+      "Salary Guide": "/salary",
+
+      // Employers
+      "Post a Job": "/jobs/create",
+      "Browse Talent": "/talent",
+      Pricing: "/pricing",
+      Resources: "/resources",
+
+      // Company
+      About: "/about",
+      Contact: "/contact",
+      Privacy: "/privacy",
+      Terms: "/terms",
+      Cookies: "/cookies",
+    };
+
+    return map[label] || "/";
+  };
+
   return (
     <footer className="border-t border-slate-800 bg-[#0a0a0b] mt-24">
       <div className="max-w-7xl mx-auto px-6 py-16">
@@ -64,12 +91,12 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {links.map((link) => (
                   <li key={link}>
-                    <a
-                      href="#"
+                    <Link
+                      to={getFooterLink(link)}
                       className="text-sm text-slate-500 hover:text-slate-300 transition-colors"
                     >
                       {link}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

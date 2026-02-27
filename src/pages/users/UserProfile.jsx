@@ -14,6 +14,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { useAuth } from "../../context/AuthContext";
 import { userAPI } from "../../services/api";
+import { fileUrl } from "../../utils/utils";
 
 export default function UserProfile() {
   const { user: currentUser } = useAuth();
@@ -44,7 +45,6 @@ export default function UserProfile() {
       let response;
       if (isOwnProfile) {
         response = await userAPI.getProfile();
-        console.log(response);
       } else {
         response = await userAPI.getProfileById(id);
       }
@@ -118,7 +118,7 @@ export default function UserProfile() {
                 <div className="relative flex-shrink-0">
                   {profile?.profilePictureUrl ? (
                     <img
-                      src={profile.profilePictureUrl}
+                      src={fileUrl(profile.profilePictureUrl)}
                       alt={profile.name}
                       className="h-24 w-24 rounded-sm object-cover border border-slate-700"
                     />

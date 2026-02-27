@@ -4,6 +4,9 @@ import axios from "axios";
 const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api";
 
+const VITE_SERVER_BASE_URL =
+  import.meta.env.VITE_SERVER_BASE_URL || "http://localhost:5000";
+
 // Create axios instance
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -23,7 +26,7 @@ api.interceptors.request.use(
   },
   (error) => {
     return Promise.reject(error);
-  }
+  },
 );
 
 // Response interceptor to handle errors
@@ -37,7 +40,7 @@ api.interceptors.response.use(
       window.location.href = "/login";
     }
     return Promise.reject(error);
-  }
+  },
 );
 
 // Auth API calls

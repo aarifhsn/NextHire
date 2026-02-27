@@ -28,7 +28,7 @@ export default function Header() {
               <Briefcase className="h-4 w-4 text-black" />
             </div>
             <span className="font-display font-bold text-white text-lg tracking-tight">
-              Jobbr
+              NextHire
             </span>
           </Link>
 
